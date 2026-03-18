@@ -11,9 +11,9 @@ class QRCodeCreate(BaseModel):
     def validate_url(cls, v: str) -> str:
         v = v.strip()
         if not v:
-            raise ValueError("La URL no puede estar vacía")
+            raise ValueError("URL cannot be empty")
         if not v.startswith(("http://", "https://")):
-            raise ValueError("La URL debe comenzar con http:// o https://")
+            raise ValueError("URL must start with http:// or https://")
         return v
 
 

@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# Priorize the ENV variable, if not set, fallback to local sqlite
+# Prioritize the ENV variable, if not set, fallback to local sqlite
 DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./qr_tracker.db")
 
 # Fix for Supabase (which might provide 'postgres://' instead of 'postgresql://')
